@@ -21,7 +21,7 @@ public class CameraControl : MonoBehaviour
     {
 		if (Input.GetKey("w") || Input.GetKey("up"))
         {
-            rigid_body.AddRelativeForce(new Vector3(0, 0, move_speed));
+            rigid_body.AddRelativeForce(new Vector3(0, move_speed, 20));
         }
         if (Input.GetKey("a") || Input.GetKey("left"))
         {
@@ -29,11 +29,19 @@ public class CameraControl : MonoBehaviour
         }
         if (Input.GetKey("s") || Input.GetKey("down"))
         {
-            rigid_body.AddRelativeForce(new Vector3(0, 0, -move_speed));
+            rigid_body.AddRelativeForce(new Vector3(0, -move_speed, -20));
         }
         if (Input.GetKey("d") || Input.GetKey("right"))
         {
             rigid_body.AddRelativeForce(new Vector3(move_speed, 0, 0));
+        }
+        if (Input.GetKey("q"))
+        {
+            //rotate left
+        }
+        if (Input.GetKey("e"))
+        {
+            //rotate right
         }
 
         // Middle click to drag around

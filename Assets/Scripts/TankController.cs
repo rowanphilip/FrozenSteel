@@ -28,6 +28,13 @@ public class TankController : MonoBehaviour
 
     public GameObject Projectile;
 
+    public GameObject Selection;
+    public GameObject health_bar;
+
+    public ParticleSystem fireEffect;
+
+    public Camera camera;
+
     private enum ETargetType
     {
         eNone = 0,
@@ -52,6 +59,10 @@ public class TankController : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
+
+        Selection.SetActive(false);
+        health_bar.SetActive(false);
+
         GoToTarget = new Vector3();
         AttackTarget = null;
         TargetType = ETargetType.eNone;
@@ -63,6 +74,8 @@ public class TankController : MonoBehaviour
         CannonTransform = Cannon.GetComponent<Transform>();
 
         TimeOfLastFireSeconds = Time.time;
+
+        fireEffect.Stop();
     }
 
     // Update is called once per frame
@@ -73,6 +86,7 @@ public class TankController : MonoBehaviour
             if (TargetType == ETargetType.eGoTo)
             {
                 MoveToTarget();
+                AimInDirection(0.0f);
             }
             else if (TargetType == ETargetType.eAttack)
             {
@@ -83,8 +97,13 @@ public class TankController : MonoBehaviour
                     FireCannon();
                 }
             }
-
+            else
+            {
+                AimInDirection(0.0f);
+            }
         }
+
+        health_bar.transform.LookAt(camera.transform);
     }
 
     void MoveToTarget()
@@ -97,7 +116,7 @@ public class TankController : MonoBehaviour
         {
             TankRigidbody.AddRelativeForce(ConstantForce);
             float angle_to_target = Vector3.SignedAngle(transform.up, transform.position - GoToTarget, Vector3.up);
-            Debug.Log(angle_to_target);
+            //Debug.Log(angle_to_target);
 
             if (Mathf.Abs(angle_to_target) > 5.0)
             {
@@ -116,6 +135,11 @@ public class TankController : MonoBehaviour
         // Find the angle that the turret will need to turn by to face target
         float angle_to_target = Vector3.SignedAngle(TurretTransform.up, transform.position - target_location, Vector3.up);
 
+        return AimInDirection(angle_to_target);
+    }
+
+    bool AimInDirection(float angle_to_target)
+    {
         // Convert this in to a target turn rate
         float target_turn_rate = TurretTurnRate * angle_to_target / 180.0f;
 
@@ -131,28 +155,6 @@ public class TankController : MonoBehaviour
         }
 
         return ready_to_fire;
-
-        //// Within this angle (degrees) scale turn speed to slow down
-        //const float angle_threshold = 10.0f;
-
-        //if (Mathf.Abs(angle_to_target) > 10.0)
-        //{
-        //    TurretRigidbody.AddRelativeTorque(new Vector3(0, 0, Mathf.Sign(angle_to_target) * MaxTurretTurnStrength));
-        //}
-        //else
-        //{
-        //    if (angle_to_target < 5.0)
-        //    {
-        //        ready_to_fire = true;
-        //    }
-
-        //    TurretRigidbody.AddRelativeTorque(new Vector3(0, 0, angle_to_target * MaxTurretTurnStrength / angle_threshold));
-        //}
-
-        //// Add friction
-        //TurretRigidbody.AddRelativeTorque(-TurretRigidbody.angularVelocity * TurretRotateFriction);
-
-        //return ready_to_fire;
     }
 
     public void SetTargetLocation(Vector3 new_target)
@@ -166,15 +168,17 @@ public class TankController : MonoBehaviour
         AttackTarget = target_enemy;
         TargetType = ETargetType.eAttack;
     }
-    
+
     public void Select()
     {
-        GetComponent<MeshRenderer>().materials[2] = SelectedMaterial;
+        Selection.SetActive(true);
+        health_bar.SetActive(true);
     }
 
     public void UnSelect()
     {
-        GetComponent<MeshRenderer>().materials[2] = NotSelectedMaterial;
+        Selection.SetActive(false);
+        health_bar.SetActive(false);
     }
 
     public Vector3 GetPosition()
@@ -182,7 +186,7 @@ public class TankController : MonoBehaviour
         return this.transform.position;
     }
 
-    // Spawn a projectil from the cannon
+    // Spawn a projectile from the cannon
     // Will only fire if allowed by the rate of fire
     private void FireCannon()
     {
@@ -191,11 +195,20 @@ public class TankController : MonoBehaviour
         // Is it time to fire?
         if (current_time_seconds - TimeOfLastFireSeconds > (1.0f / RateOfFire))
         {
-            Debug.Log("Firing!");
+            //Debug.Log("Firing!");
 
             GameObject new_projectile = Instantiate(Projectile, MuzzleTransform.position, CannonTransform.rotation);
             new_projectile.GetComponent<Rigidbody>().AddForce(-CannonTransform.up.normalized * 5000);
             TimeOfLastFireSeconds = Time.time;
+
+            fireEffect.Play();
+            StartCoroutine(Wait(1));
+            fireEffect.Stop();
         }
+    }
+
+    public IEnumerator Wait(int seconds)
+    {
+        yield return new WaitForSeconds(seconds);
     }
 }

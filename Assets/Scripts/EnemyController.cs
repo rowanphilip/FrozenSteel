@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -18,4 +18,14 @@ public class EnemyController : MonoBehaviour {
     {
         return this.transform.position;
     }
+
+    /*
+    void OnCollisionEnter(Collision item)
+    {
+        if (item.gameObject.tag == "Projectile")
+        {
+            gameObject.GetComponent<MeshRenderer>().material = DullMetal;
+        }
+    }
+    */
 }

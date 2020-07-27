@@ -6,22 +6,20 @@ public class ObjectManager : MonoBehaviour {
 
     private List<TankController> all_tanks;
     private List<EnemyController> enemy_tanks;
-
-    public TankController starting_tank_1;
-    public TankController starting_tank_2;
+    private List<FactoryScript> all_factories;
 
     public EnemyController enemy_tank;
+    public FactoryScript start_factory;
 
     // Use this for initialization
     void Start ()
     {
         this.all_tanks = new List<TankController>();
         this.enemy_tanks = new List<EnemyController>();
-
-        this.all_tanks.Add(starting_tank_1);
-        this.all_tanks.Add(starting_tank_2);
+        this.all_factories = new List<FactoryScript>();
 
         this.enemy_tanks.Add(enemy_tank);
+        this.all_factories.Add(start_factory);
     }
 	
 	// Update is called once per frame
@@ -30,7 +28,7 @@ public class ObjectManager : MonoBehaviour {
 		
 	}
 
-    void RegisterNewTank(TankController tank)
+    public void RegisterNewTank(TankController tank)
     {
         all_tanks.Add(tank);
     }
@@ -38,6 +36,11 @@ public class ObjectManager : MonoBehaviour {
     void RegisterNewEnemy(EnemyController enemy)
     {
         enemy_tanks.Add(enemy);
+    }
+
+    void RegisterNewFactory(FactoryScript factory)
+    {
+        all_factories.Add(factory);
     }
 
     public List<TankController> GetAllTanks()
@@ -48,5 +51,10 @@ public class ObjectManager : MonoBehaviour {
     public List<EnemyController> GetAllEnemies()
     {
         return enemy_tanks;
+    }
+
+    public List<FactoryScript> GetAllFactories()
+    {
+        return all_factories;
     }
 }
