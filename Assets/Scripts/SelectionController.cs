@@ -20,8 +20,15 @@ public class SelectionController : MonoBehaviour {
     private FactoryScript SelectedFactory;
     private bool FactorySelected;
 
-	// Use this for initialization
-	void Start ()
+    public RectTransform selectionBox;
+    private Vector2 startPos;
+
+    private List<TankController> selected_tanks;
+
+    public GameObject Indicator;
+
+    // Use this for initialization
+    void Start ()
     {
         this.SelectedFactory = null;
         this.SelectedTank = null;
@@ -35,6 +42,71 @@ public class SelectionController : MonoBehaviour {
 	void Update ()
     {
         HandleMouseInput();
+
+
+        //if statements set the variables required for selection box
+        //code: https://www.youtube.com/watch?v=cd7pgnw5OLA
+        if (Input.GetMouseButtonDown(0))
+        {
+            startPos = Input.mousePosition;
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            releaseSelection();
+        }
+
+        if (Input.GetMouseButton(0))
+        {
+            updateSelection(Input.mousePosition);
+        }
+
+        //A map interaction indicator
+        /*
+        if (tank_selected && Input.GetMouseButton(0))
+        {
+            Indicator.SetActive(true);
+            Indicator.transform.position = getPointOfClick();
+        }
+        */
+    }
+
+    //Allows the creation of selection box
+    //code: https://www.youtube.com/watch?v=cd7pgnw5OLA
+    private void updateSelection(Vector2 currentMouse)
+    {
+        if (!selectionBox.gameObject.activeInHierarchy)
+        {
+            selectionBox.gameObject.SetActive(true);
+        }
+
+        float width = currentMouse.x - startPos.x;
+        float height = currentMouse.y - startPos.y;
+
+        selectionBox.sizeDelta = new Vector2(Mathf.Abs(width),Mathf.Abs(height));
+        selectionBox.anchoredPosition = startPos + new Vector2(width / 2, height / 2);
+    }
+
+    //is called when the selection box is completed, will find all units within the box and select them
+    //code: https://www.youtube.com/watch?v=cd7pgnw5OLA
+    private void releaseSelection()
+    {
+        selectionBox.gameObject.SetActive(false);
+
+        List<TankController> all_tanks = ObjectManager.GetAllTanks();
+
+        Vector2 min = selectionBox.anchoredPosition - (selectionBox.sizeDelta / 2);
+        Vector2 max = selectionBox.anchoredPosition + (selectionBox.sizeDelta / 2);
+
+        foreach (TankController tank in all_tanks)
+        {
+            Vector3 screenPos = main_camera.WorldToScreenPoint(tank.transform.position);
+
+            if (screenPos.x > min.x && screenPos.x < max.x && screenPos.y > min.y && screenPos.y < max.y)
+            {
+                SelectSingleTank(tank);
+            }
+        }
     }
 
     private void HandleMouseInput()
@@ -57,21 +129,8 @@ public class SelectionController : MonoBehaviour {
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    // If tank already selected, first unselect it
-                    if (TankSelected)
-                    {
-                        SelectedTank.UnSelect();
-                    }
-                    else if (FactorySelected)
-                    {
-                        SelectedFactory.UnSelect();
-                    }
-
-                    // Select the new tank
-                    SelectedTank = near_tank;
-                    TankSelected = true;
-                    FactorySelected = false;
-                    SelectedTank.Select();
+                    //SelectMultipleTanks(near_tank);
+                    SelectSingleTank(near_tank);
                 }
 
                 Cursor.SetCursor(SelectCursor, Vector2.zero, CursorMode.Auto);
@@ -93,20 +152,7 @@ public class SelectionController : MonoBehaviour {
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    if (TankSelected)
-                    {
-                        SelectedTank.UnSelect();
-                    }
-                    else if (FactorySelected)
-                    {
-                        SelectedFactory.UnSelect();
-                    }
-
-                    // Select the new factory
-                    SelectedFactory = near_factory;
-                    FactorySelected = true;
-                    TankSelected = false;
-                    SelectedFactory.Select();
+                    SelectSingleBuilding(near_factory);
                 }
 
                 Cursor.SetCursor(SelectCursor, Vector2.zero, CursorMode.Auto);
@@ -118,21 +164,27 @@ public class SelectionController : MonoBehaviour {
                 {
                     SelectedTank.SetTargetLocation(point_of_click);
                 }
-                else if (TankSelected && Input.GetMouseButtonDown(1))
+                else if (Input.GetMouseButtonDown(1))
                 {
-                    SelectedTank.UnSelect();
-                    TankSelected = false;
-                }
-                else if (FactorySelected && Input.GetMouseButtonDown(1))
-                {
-                    SelectedFactory.UnSelect();
-                    FactorySelected = false;
+                    UnselectAll();
                 }
 
                 Cursor.SetCursor(StandardCursor, Vector2.zero, CursorMode.Auto);
             }
         }
 
+    }
+
+    // Returns the location of the mouse click
+    public Vector3 getPointOfClick()
+    {
+        Ray ray = main_camera.ScreenPointToRay(Input.mousePosition);
+
+        RaycastHit hit = new RaycastHit();
+
+        Vector3 point_of_click = ray.origin + ray.direction * hit.distance;
+
+        return point_of_click;
     }
 
     // Selects
@@ -211,4 +263,60 @@ public class SelectionController : MonoBehaviour {
 
         return factory_selected;
     }
+
+    private void UnselectAll()
+    {
+        if (TankSelected)
+        {
+            SelectedTank.UnSelect();
+            TankSelected = false;
+        }
+
+        if (FactorySelected)
+        {
+            SelectedFactory.UnSelect();
+            FactorySelected = false;
+        }
+    }
+
+    private void SelectSingleTank(TankController selected_tank)
+    {
+        // Unselect anything currently selected
+        UnselectAll();
+
+        // Select new tank
+
+        // Track selected
+        SelectedTank = selected_tank;
+        TankSelected = true;
+
+        // Trigger tank selected behaviour
+        SelectedTank.Select();
+    }
+
+    private void SelectSingleBuilding(FactoryScript selected_factory)
+    {
+        // Unselect anything currently selected
+        UnselectAll();
+
+        // Select new tank
+
+        // Track selected
+        SelectedFactory = selected_factory;
+        FactorySelected = true;
+
+        // Trigger tank selected behaviour
+        SelectedFactory.Select();
+    }
+
+    private void SelectMultipleTanks(TankController selected_tank)
+    {
+        selected_tanks.Add(selected_tank);
+
+        foreach (TankController Tank in selected_tanks)
+        {
+            Tank.Select();
+        }
+    }
+
 }

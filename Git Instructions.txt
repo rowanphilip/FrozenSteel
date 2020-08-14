@@ -1,0 +1,9 @@
+Open git bash in project location and then enter:
+
+*Add changes
+git add .
+git commit -m "Message"
+git push origin master
+
+*Retrieve changes
+git pull

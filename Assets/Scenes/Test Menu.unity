@@ -712,7 +712,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9dc16623c5718474eabe6b411cd48ebb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 183.51
+      value: 210.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9dc16623c5718474eabe6b411cd48ebb,
         type: 3}
@@ -722,7 +722,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9dc16623c5718474eabe6b411cd48ebb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 382.2
+      value: 331.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9dc16623c5718474eabe6b411cd48ebb,
         type: 3}
@@ -1579,6 +1579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy_tank: {fileID: 0}
+  start_factory: {fileID: 0}
 --- !u!4 &1869808670
 Transform:
   m_ObjectHideFlags: 0

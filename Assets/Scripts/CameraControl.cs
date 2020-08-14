@@ -10,38 +10,63 @@ public class CameraControl : MonoBehaviour
     private Vector3 first_clicked_location;
     private bool middle_click_down;
 
+    private float heightY;
+    private float maxHeight = 50f;
+
+    public GameObject Camera;
+
 	// Use this for initialization
 	void Start ()
     {
+        maxHeight = 50;
+
         rigid_body = GetComponent<Rigidbody>();
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-		if (Input.GetKey("w") || Input.GetKey("up"))
+        //forward
+        if (Input.GetKey("w") || Input.GetKey("up"))
         {
             rigid_body.AddRelativeForce(new Vector3(0, move_speed, 20));
         }
+        //left
         if (Input.GetKey("a") || Input.GetKey("left"))
         {
             rigid_body.AddRelativeForce(new Vector3(-move_speed, 0, 0));
         }
+        //backward
         if (Input.GetKey("s") || Input.GetKey("down"))
         {
             rigid_body.AddRelativeForce(new Vector3(0, -move_speed, -20));
         }
+        //right
         if (Input.GetKey("d") || Input.GetKey("right"))
         {
             rigid_body.AddRelativeForce(new Vector3(move_speed, 0, 0));
         }
+        //rotate
         if (Input.GetKey("q"))
         {
             //rotate left
+            Camera.transform.Rotate(0, -1, 1);
         }
-        if (Input.GetKey("e"))
+        else if (Input.GetKey("e"))
         {
             //rotate right
+            Camera.transform.Rotate(0, 1, -1);
+        }
+        //zoom
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+        {
+            //zoom in
+            Camera.transform.position += new Vector3(0,-4,0);
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+        {
+            //zoom out
+            Camera.transform.position += new Vector3(0, 4, 0);
         }
 
         // Middle click to drag around
