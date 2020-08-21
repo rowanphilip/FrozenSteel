@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    public float move_speed;
+    private int move_speed;
 
     private Rigidbody rigid_body;
     private Vector3 first_clicked_location;
     private bool middle_click_down;
 
     private float heightY;
-    private float maxHeight = 50f;
 
     public GameObject Camera;
 
 	// Use this for initialization
 	void Start ()
     {
-        maxHeight = 50;
+        move_speed = 20;
 
         rigid_body = GetComponent<Rigidbody>();
     }
@@ -60,13 +59,19 @@ public class CameraControl : MonoBehaviour
         //zoom
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
-            //zoom in
-            Camera.transform.position += new Vector3(0,-4,0);
+            //if (this.transform.position.y > 1)
+            //{
+                //zoom in
+                Camera.transform.position += new Vector3(0, -4, 0);
+            //}
         }
         else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
         {
-            //zoom out
-            Camera.transform.position += new Vector3(0, 4, 0);
+            //if (this.transform.position.y < 64)
+            //{
+                //zoom out
+                Camera.transform.position += new Vector3(0, 4, 0);
+            //}
         }
 
         // Middle click to drag around

@@ -319,4 +319,10 @@ public class SelectionController : MonoBehaviour {
         }
     }
 
+    //Temporary method for pathfinding
+    public TankController getSelectedTank()
+    {
+        return SelectedTank;
+    }
+
 }
