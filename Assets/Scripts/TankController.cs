@@ -5,9 +5,7 @@ using UnityEngine;
 public class TankController : MonoBehaviour
 {
     public Vector3 ConstantForce;
-    public CollisionDetection TackCollisionDetector;
-    public Material SelectedMaterial;
-    public Material NotSelectedMaterial;
+    public CollisionDetection TrackCollisionDetector;
 
     // Control fire speed
     public float RateOfFire;
@@ -25,6 +23,7 @@ public class TankController : MonoBehaviour
 
     public GameObject Turret;
     public GameObject Cannon;
+    public GameObject Track;
 
     public GameObject Projectile;
 
@@ -45,11 +44,13 @@ public class TankController : MonoBehaviour
     private Vector3 GoToTarget;
     private EnemyController AttackTarget;
 
-    private Rigidbody TankRigidbody;
+    private Rigidbody TrackRigidbody;
+    private Transform TrackTransform;
 
     private Rigidbody TurretRigidbody;
     private Transform TurretTransform;
 
+    private Rigidbody CannonRigidbody;
     private Transform CannonTransform;
 
     public Transform MuzzleTransform;
@@ -64,13 +65,16 @@ public class TankController : MonoBehaviour
         GoToTarget = new Vector3();
         AttackTarget = null;
         TargetType = ETargetType.eNone;
-        TankRigidbody = GetComponent<Rigidbody>();
+
+        TrackRigidbody = Track.GetComponent<Rigidbody>();
+        TrackTransform = Track.GetComponent<Transform>();
 
         TurretRigidbody = Turret.GetComponent<Rigidbody>();
         TurretTransform = Turret.GetComponent<Transform>();
 
+        CannonRigidbody = Cannon.GetComponent<Rigidbody>();
         CannonTransform = Cannon.GetComponent<Transform>();
-
+        
         TimeOfLastFireSeconds = Time.time;
 
         fireEffect.Stop();
@@ -79,7 +83,7 @@ public class TankController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (TackCollisionDetector.IsColliding())
+        if (TrackCollisionDetector.IsColliding())
         {
             if (TargetType == ETargetType.eGoTo)
             {
@@ -104,23 +108,23 @@ public class TankController : MonoBehaviour
 
     void MoveToTarget()
     {
-        if (Vector3.Distance(transform.position, GoToTarget) <= MinDistanceFromTarget)
+        if (Vector3.Distance(TrackTransform.position, GoToTarget) <= MinDistanceFromTarget)
         {
             TargetType = ETargetType.eNone;
         }
         else
         {
-            TankRigidbody.AddRelativeForce(ConstantForce);
-            float angle_to_target = Vector3.SignedAngle(transform.up, transform.position - GoToTarget, Vector3.up);
+            TrackRigidbody.AddRelativeForce(ConstantForce);
+            float angle_to_target = Vector3.SignedAngle(TrackTransform.up, TrackTransform.position - GoToTarget, Vector3.up);
             //Debug.Log(angle_to_target);
 
             if (Mathf.Abs(angle_to_target) > 5.0)
             {
-                TankRigidbody.AddRelativeTorque(new Vector3(0, 0, angle_to_target * MaxTurnStrength));
+                TrackRigidbody.AddRelativeTorque(new Vector3(0, 0, angle_to_target * MaxTurnStrength));
             }
             else
             {
-                TankRigidbody.AddRelativeTorque(new Vector3(0, 0, angle_to_target * MinTurnStrength));
+                TrackRigidbody.AddRelativeTorque(new Vector3(0, 0, angle_to_target * MinTurnStrength));
             }
         }
     }

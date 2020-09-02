@@ -54,7 +54,7 @@ public class FactoryScript : MonoBehaviour
         if (Timer.text == "0")
         {
             GameObject new_tank = Instantiate(tank, creationPos, Quaternion.identity);
-            objectm.RegisterNewTank(new_tank.transform.GetChild(0).gameObject.GetComponent<TankController>());
+            objectm.RegisterNewTank(new_tank.GetComponent<TankController>());
             CurrentTime = 20;
         }
     }

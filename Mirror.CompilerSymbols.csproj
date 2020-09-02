@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6851CD03-1862-0A58-630D-E6F0D086FB1B}</ProjectGuid>
+    <ProjectGuid>{2BD2B0B4-9052-548E-3FB1-F02B99E5D8C6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Mirror.CompilerSymbols</AssemblyName>
@@ -249,34 +249,34 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CecilX">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel-Reforged/FrozenSteel/Assets/External Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Assets/External Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CecilX.Mdb">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel-Reforged/FrozenSteel/Assets/External Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Mdb.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Assets/External Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Mdb.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CecilX.Pdb">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel-Reforged/FrozenSteel/Assets/External Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Pdb.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Assets/External Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Pdb.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CecilX.Rocks">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel-Reforged/FrozenSteel/Assets/External Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Assets/External Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel-Reforged/FrozenSteel/Library/PackageCache/com.unity.ads@3.4.5/Editor/UnityEditor.Advertisements.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/PackageCache/com.unity.ads@3.4.5/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel-Reforged/FrozenSteel/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel-Reforged/FrozenSteel/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel-Reforged/FrozenSteel/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel-Reforged/FrozenSteel/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel-Reforged/FrozenSteel/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -633,16 +633,16 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel-Reforged/FrozenSteel/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel-Reforged/FrozenSteel/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TestRunner">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel-Reforged/FrozenSteel/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel-Reforged/FrozenSteel/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

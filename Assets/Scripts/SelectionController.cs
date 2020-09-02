@@ -334,10 +334,11 @@ public class SelectionController : MonoBehaviour {
             selected_tank.SetTargetLocation(move_location);
         }
     }
+
     //Temporary method for pathfinding
-    public TankController getSelectedTank()
-    {
-        return SelectedTank;
-    }
+    //public TankController getSelectedTank()
+    //{
+    //    return SelectedTank;
+    //}
 
 }
