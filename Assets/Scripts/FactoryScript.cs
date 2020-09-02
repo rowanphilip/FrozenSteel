@@ -21,6 +21,8 @@ public class FactoryScript : MonoBehaviour
 
     void Start()
     {
+        this.transform.position = new Vector3(230, 1, 120);
+
         //To be used when selection is ready:
         makeInvisible();
         UnSelect();

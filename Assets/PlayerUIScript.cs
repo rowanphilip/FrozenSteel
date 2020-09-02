@@ -14,8 +14,11 @@ public class PlayerUIScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //To be implemented in second prototype
+        /*
         BuildScreen.SetActive(false);
         buildButton.SetActive(true);
+        */
     }
 
     // Update is called once per frame
@@ -24,6 +27,8 @@ public class PlayerUIScript : MonoBehaviour
         
     }
 
+    //To be implemented in second prototype
+    /*
     public void openMenu()
     {
         buildButton.SetActive(false);
@@ -34,4 +39,5 @@ public class PlayerUIScript : MonoBehaviour
     {
         Cursor.SetCursor(FactoryCursor, Vector2.zero, CursorMode.Auto);
     }
+    */
 }

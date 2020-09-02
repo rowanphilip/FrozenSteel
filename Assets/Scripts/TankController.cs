@@ -33,8 +33,6 @@ public class TankController : MonoBehaviour
 
     public ParticleSystem fireEffect;
 
-    public Camera camera;
-
     private enum ETargetType
     {
         eNone = 0,
@@ -102,8 +100,6 @@ public class TankController : MonoBehaviour
                 AimInDirection(0.0f);
             }
         }
-
-        health_bar.transform.LookAt(camera.transform);
     }
 
     void MoveToTarget()

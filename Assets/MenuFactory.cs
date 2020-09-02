@@ -12,6 +12,8 @@ public class MenuFactory : MonoBehaviour
     private float TimeOfLastProduction;
     private float RateOfProduction;
 
+    private int tankNum;
+
     void Start()
     {
         creationPos = GameObject.FindGameObjectWithTag("Spawn").transform.position;
@@ -23,6 +25,14 @@ public class MenuFactory : MonoBehaviour
     void Update()
     {
         makeTank();
+
+        if (tankNum > 100)
+        {
+            foreach (TankController t in objectm.GetAllTanks())
+            {
+                Destroy(t);
+            }
+        }
     }
 
     public void makeTank()
@@ -35,6 +45,7 @@ public class MenuFactory : MonoBehaviour
             GameObject new_tank = Instantiate(tank, creationPos, Quaternion.identity);
             objectm.RegisterNewTank(new_tank.transform.GetChild(0).gameObject.GetComponent<TankController>());
             TimeOfLastProduction = Time.time;
+            tankNum++;
         }
     }
 
