@@ -335,10 +335,17 @@ public class SelectionController : MonoBehaviour {
         }
     }
 
+    private void logAllSelectedTanks()
+    {
+        foreach (TankController t in SelectedTanks)
+        {
+            Debug.Log(t.GetPosition());
+        }
+    }
+
     //Temporary method for pathfinding
     //public TankController getSelectedTank()
     //{
     //    return SelectedTank;
     //}
-
 }

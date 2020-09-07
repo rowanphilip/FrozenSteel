@@ -183,7 +183,7 @@ public class TankController : MonoBehaviour
 
     public Vector3 GetPosition()
     {
-        return this.transform.position;
+        return this.transform.GetChild(0).position;
     }
 
     // Spawn a projectile from the cannon
