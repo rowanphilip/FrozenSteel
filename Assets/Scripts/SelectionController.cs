@@ -79,7 +79,7 @@ public class SelectionController : MonoBehaviour {
 
         foreach (TankController tank in all_tanks)
         {
-            Vector3 screenPos = main_camera.WorldToScreenPoint(tank.transform.position);
+            Vector3 screenPos = main_camera.WorldToScreenPoint(tank.transform.GetChild(0).position);
 
             if (screenPos.x > min.x && screenPos.x < max.x && screenPos.y > min.y && screenPos.y < max.y)
             {
@@ -124,7 +124,6 @@ public class SelectionController : MonoBehaviour {
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    //SelectMultipleTanks(near_tank);
                     SelectSingleTank(near_tank);
                 }
 

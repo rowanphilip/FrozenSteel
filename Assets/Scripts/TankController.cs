@@ -58,7 +58,6 @@ public class TankController : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-
         Selection.SetActive(false);
         health_bar.SetActive(false);
 
