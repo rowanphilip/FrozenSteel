@@ -58,7 +58,6 @@ public class TankController : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-
         Selection.SetActive(false);
         health_bar.SetActive(false);
 
@@ -133,7 +132,7 @@ public class TankController : MonoBehaviour
     bool AimAtTarget(Vector3 target_location)
     {
         // Find the angle that the turret will need to turn by to face target
-        float angle_to_target = Vector3.SignedAngle(TurretTransform.up, transform.position - target_location, Vector3.up);
+        float angle_to_target = Vector3.SignedAngle(TurretTransform.up, TurretTransform.position - target_location, Vector3.up);
 
         return AimInDirection(angle_to_target);
     }
@@ -183,7 +182,7 @@ public class TankController : MonoBehaviour
 
     public Vector3 GetPosition()
     {
-        return this.transform.position;
+        return this.transform.GetChild(0).position;
     }
 
     // Spawn a projectile from the cannon

@@ -7392,10 +7392,10 @@ MonoBehaviour:
   ConstantForce: {x: 0, y: -10, z: 0}
   TrackCollisionDetector: {fileID: 1869423538}
   RateOfFire: 1
-  MinTurnStrength: 1
-  MaxTurnStrength: 1
-  TurretTurnRate: 1
-  TurretTurnStrength: 1
+  MinTurnStrength: 3
+  MaxTurnStrength: 5
+  TurretTurnRate: 3
+  TurretTurnStrength: 4
   MinDistanceFromTarget: 1
   AttackRange: 1
   Turret: {fileID: 4760046782977120837}
