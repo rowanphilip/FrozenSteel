@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F41C61DC-8DEE-4FA4-522C-494AF7A197C1}</ProjectGuid>
+    <ProjectGuid>{165008FE-70D5-C76C-F0F5-43BCBEC4E466}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -270,25 +270,25 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CecilX">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Assets/External Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Assets/External Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CecilX.Mdb">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Assets/External Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Mdb.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Assets/External Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Mdb.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CecilX.Pdb">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Assets/External Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Pdb.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Assets/External Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Pdb.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CecilX.Rocks">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Assets/External Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Assets/External Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -636,96 +636,96 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Monetization">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.multiplayer-hlapi.Editor">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.multiplayer-weaver.Editor">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.XR.LegacyInputHelpers">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.SpatialTracking">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.XR.LegacyInputHelpers">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.multiplayer-hlapi.Runtime">
- <HintPath>C:/Users/User/Documents/Unity Projects/Frozen Steel/FrozenSteel 6 Electric Boogaloo/FrozenSteel/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+ <HintPath>E:/Documents/Games Development/Frozen Steel/Frozen Steel/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Mirror.Weaver.csproj">
-      <Project>{E2B6B90F-C89D-83A0-7BC0-6C007DC4FD95}</Project>
+      <Project>{70BD3469-201B-E757-7EBF-1FE1DA73E961}</Project>
       <Name>Mirror.Weaver</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.Authenticators.csproj">
-      <Project>{3D6BB6D5-8622-2598-3D25-93F7CC1E9AFF}</Project>
+      <Project>{DB4CC9FD-DB67-9F40-CCCF-DCFF3908EC7F}</Project>
       <Name>Mirror.Authenticators</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.Components.csproj">
-      <Project>{D06A8CA4-1A8D-5DDA-8A94-F283BDE48A1C}</Project>
+      <Project>{6FD5E280-393F-89C9-639B-9CC3858B215E}</Project>
       <Name>Mirror.Components</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.CompilerSymbols.csproj">
-      <Project>{6851CD03-1862-0A58-630D-E6F0D086FB1B}</Project>
+      <Project>{2BD2B0B4-9052-548E-3FB1-F02B99E5D8C6}</Project>
       <Name>Mirror.CompilerSymbols</Name>
     </ProjectReference>
     <ProjectReference Include="Ninja.WebSockets.csproj">
-      <Project>{62A0905D-E7D4-CE35-A075-421DC71EEE1E}</Project>
+      <Project>{A415EBDB-FDA5-0891-EEE3-680E3321BC82}</Project>
       <Name>Ninja.WebSockets</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.csproj">
-      <Project>{E1DF715E-D7C3-A6A4-8F8A-154CD332A174}</Project>
+      <Project>{1D62D74D-49FA-ADD8-1FDB-1E8876EDBF76}</Project>
       <Name>Mirror</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.Editor.csproj">
-      <Project>{48EA58A8-1E74-A1F8-134F-651D9F0D5569}</Project>
+      <Project>{0177D5DA-1358-B735-BF29-63012E31B945}</Project>
       <Name>Mirror.Editor</Name>
     </ProjectReference>
   </ItemGroup>
